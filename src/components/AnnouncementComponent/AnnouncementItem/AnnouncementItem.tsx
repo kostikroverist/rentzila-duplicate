@@ -15,7 +15,6 @@ const AnnouncementItem: FC<Props> = ({ announcement }) => {
             return str;
         }
     };
-
     return (
         <>
             <Link to={""}>
@@ -32,7 +31,8 @@ const AnnouncementItem: FC<Props> = ({ announcement }) => {
                         </p>
                         <p className="flex text-lg mt-2">
                             <IoLocationOutline size={"24"} />
-                            {announcement.location}
+                            {announcement.region === 'undefined' ? '' : announcement.region}
+                            {announcement.town === 'undefined' ? '' : announcement.town}
                         </p>
                     </div>
                 </li>
